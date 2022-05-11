@@ -20,17 +20,23 @@
 (def day2-source
   (->> (io/resource "day2.sample.txt")
        slurp ;;메모리라..더 좋은게 필요한데..
-       (str/split-lines)))
+       (str/split-lines))
+  )
 
 (println day2-source)
 
 ;; map을 써보자 {}
 
 (defn getChars [text]
-  (println (first text))
+  (println "text" text)
+  (println "first text" (into [] (first text)))
+  (println "text 2", text)
+  ;; 왜 캐릭터가 안나오지??
+  (for [c1 (into [] (first text))] (println "char" c1) )
   (println "###########"))
 
 (defn getlines [value]
+  ;; 왜 value는 vector 안에 쌓여있지?
   (println "value" value)
   (for [text (first value)] (getChars [(seq text)])))
 
@@ -41,8 +47,7 @@
 (day2-1)
 
 
-((map #(str %) day2-source)
- -> ())
+((map #(str %) day2-source))
 
 
 ;; 파트 2
