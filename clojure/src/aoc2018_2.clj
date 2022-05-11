@@ -25,6 +25,7 @@
 
 (println day2-source)
 
+(def result {:0 1})
 ;; map을 써보자 {}
 
 (defn getChars [text]
@@ -33,15 +34,23 @@
   (println "text 2", text)
   ;; 왜 캐릭터가 안나오지??
   (for [c1 (into [] (first text))] (println "char" c1) )
-  (println "###########"))
+  (println "###########")
+  ;; map {}을 만들어서 char 별로 카운트 함
+  ;; result에 숫자를 키로 하는 추가
+  )
 
 (defn getlines [value]
   ;; 왜 value는 vector 안에 쌓여있지?
   (println "value" value)
   (for [text (first value)] (getChars [(seq text)])))
 
+;; result의 value를 곱하는 로직
+(println(vals(result)))
+(def solve(reduce * vals(result)))
+
 (defn day2-1 []
-  (getlines[day2-source]))
+  (getlines[day2-source])
+  (solve))
 
 
 (day2-1)
