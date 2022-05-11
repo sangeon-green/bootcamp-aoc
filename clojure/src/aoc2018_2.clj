@@ -2,7 +2,6 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
-
 ;; 파트 1
 ;; 주어진 각각의 문자열에서, 같은 문자가 두번 혹은 세번씩 나타난다면 각각을 한번씩 센다.
 ;; 두번 나타난 문자가 있는 문자열의 수 * 세번 나타난 문자가 있는 문자열의 수를 반환하시오.
@@ -16,48 +15,50 @@
 ;; ababab 3개의 a, 3개의 b 지만 한 문자열에서 같은 갯수는 한번만 카운트함 -> (두번 나오는 문자열 수: 4, 세번 나오는 문자열 수: 3)
 ;; 답 : 4 * 3 = 12
 
-;;일단 소스
-(def day2-source
-  (->> (io/resource "day2.sample.txt")
-       slurp ;;메모리라..더 좋은게 필요한데..
-       (str/split-lines)))
+(defn count-same-char [string]
+    "스트링 한 줄을 캐릭터로 쪼갠 후 같은 2, 3번 중복되는 캐릭터 카운트 반환
+   입력: string
+   출력: [2번 반복된 캐릭터 여부 1 아니면 0, 2번 반복된 캐릭터 여부 1 아니면 0]"
+  (loop [text string
+         count-same-map {}]
+    (if text
+      (let [char (first text)
+            count (get count-same-map char 0)]
+        (recur (next text) (assoc count-same-map char (+ count 1))))
+      (let [counut-same-map-values (vals count-same-map)]
+        (loop [counut-same-map-value counut-same-map-values has-same-count-two 0 has-same-count-tree 0]
+          (if counut-same-map-value
+            (let [first-value (first counut-same-map-value)]
+              (recur (next counut-same-map-value)
+                     (if (== first-value 2) 1 has-same-count-two)
+                     (if (== first-value 3) 1 has-same-count-tree)))
+            [has-same-count-two has-same-count-tree]))))))
 
-(println day2-source)
+(defn day2-part1 [data]
+   "string vector를 입력 받아서 각 줄마다 2,3번 반복되는 캐릭터 숫자
+   입력: data -> string vector
+   출력: ...."
+  (loop [same-char-count-two 0 same-char-count-three 0 inputs data]
+    (if inputs
+      #_{:clj-kondo/ignore [:redundant-do]}
+      (do
+        (let [count-same-char-result (count-same-char (first inputs))]
+          (recur (+ same-char-count-two (if (> (first count-same-char-result) 0) 1 0))
+                 (+ same-char-count-three (if (> (last count-same-char-result) 0) 1 0))
+                 (next inputs))))
+      (* same-char-count-two same-char-count-three))))
 
-(def result {:0 1})
-(def test "aaaa")
-;; map을 써보자 {}
+(comment
+  (defn get-data
+    "입력: 파일 경로
+     출력: 파일을 읽어서 stirng vector 반환"
+    [filename]
+    (->> (io/resource filename)
+         slurp
+         (str/split-lines)))
 
-(defn getChars [text]
-  (println "text" text)
-  (println "first text" (into [] (first text)))
-  (println "text 2", text)
-  ;; 왜 캐릭터가 안나오지??
-  (for [c1 (into [] (first text))] (println "char" c1))
-  (println "###########")
-  ;; map {}을 만들어서 char 별로 카운트 함
-  ;; result에 숫자를 키로 하는 추가
-  )
-
-(defn getlines [value]
-  ;; 왜 value는 vector 안에 쌓여있지?
-  (println "value" value)
-  (for [text (first value)] (getChars [(seq text)])))
-
-;; result의 value를 곱하는 로직
-(println test)
-(println (:0 result))
-(def solve (reduce * vals (result)))
-
-(defn day2-1 []
-  (getlines [day2-source])
-  (solve))
-
-
-(day2-1)
-
-
-((map #(str %) day2-source))
+  ((day2-part1 (get-data "day2.sample.txt"))
+  ))
 
 
 ;; 파트 2
