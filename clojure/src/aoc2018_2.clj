@@ -68,7 +68,8 @@
     (str/join
      (for [index (range (count origin-string))
            :let [origin-char (nth origin-string index) target-char (nth compare-string-bool index)]]
-       (when target-char origin-char)))))
+       (when target-char origin-char)))
+    ))
 
 (defn make-filter-same-length
   "비교문자열이 계속 증가하다보니 원본 문자열 길이를 넘어서 발생하는 에러를 막기 위해 target-string length를 제한함"
@@ -83,9 +84,9 @@
   (let [data-string-length (count (first data))
         filter-length-condition (partial make-filter-same-length data-string-length)]
     (->> (for [origin-index (range (count data))
-               target-index (range (count data))
+               target-index (range (- (count data) 1))
                :let [origin-string (nth data origin-index)
-                     target-string (nth data target-index)]
+                     target-string (nth data (+ 1 target-index))]
                :when (< origin-index target-index)]
            (find-same-position-chars origin-string target-string))
          (filter filter-length-condition)
