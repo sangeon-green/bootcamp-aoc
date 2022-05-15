@@ -31,30 +31,32 @@
 ;; 만약 20번 가드가 0시 10분~36분, 다음날 0시 5분~11분, 다다음날 0시 11분~13분 이렇게 잠들어 있었다면, “11분“이 가장 빈번하게 잠들어 있던 ‘분’. 그럼 답은 20 * 11 = 220.
 (defn 데이터로드
   "입력: 파일 경로
-   출력: (1 740 926 5 4)"
+   출력: 문자열 벡터 
+      ex) [1518-11-01 00:00] Guard #10 begins shift"
   [filename]
   (->> (io/resource filename)
        slurp
        (str/split-lines)
        sort))
 
-
-(defn 근무기록-to-데이터 [변환대상]
+(defn 키-값-생성 [변환대상]
   (let [[year month day hour min type id] 변환대상]
     {:year year :month month :day day :hour hour :min (Integer/parseInt min) :type type :id id}))
 
-
-(defn 문자열-to-구조체-변화 [변환대상]
-  "입력: [1518-11-01 00:00] Guard #10 begins shift
+(defn 근무기록-to-키값-쌍 [변환대상]
+  "문자열을 필요한 값만 추출하여 key value 쌍으로 반환함
+   입력: [1518-11-01 00:00] Guard #10 begins shift
    출력: {:year 1518, :month 11, :day 01, :hour 00, :min 00, :type Guard #10, :id 10}"
   (->> 변환대상
        (re-matcher #"\[(\d+)-(\d+)-(\d+) (\d+):(\d+)\] (falls|wakes|Guard #(\d+))")
        re-find
        rest
-       근무기록-to-데이터))
-
+       키-값-생성))
 
 (defn 근무자별기록정리 [[모든근무자취침기록 현재근무자] 현재근무자취침기록원본]
+  "입력된 키-값을 동일한 키로 묶어서 출력함
+   입력: {:year 1518, :month 11, :day 01, :hour 00, :min 00, :type Guard #10, :id 10}
+   출력: {10 [ 5 10 20 25]} ..."
   (if-let [다음근무자 (:id 현재근무자취침기록원본)]
     [(conj 모든근무자취침기록 {다음근무자 []}) 다음근무자]
     [(conj (pop 모든근무자취침기록)
@@ -70,39 +72,65 @@
 
 
 (defn 취침-기상-시간-freq [근무자 취침기록]
-  {:근무자 근무자
+  {:근무자 (Integer/parseInt 근무자)
    :총취침횟수 (count 취침기록)
-   :가장많이잠들었던분 (if (empty? (frequencies 취침기록)) 0 (key (apply max-key val (frequencies 취침기록))))
-   :가장오래잠들었던분2 (if (empty? (frequencies 취침기록)) 0 (val (apply max-key val (frequencies 취침기록)))) }
-)
+   :가장많이잠든시간 (if (empty? (frequencies 취침기록)) 0 (key (apply max-key val (frequencies 취침기록))))
+   :빈도 (if (empty? (frequencies 취침기록)) 0 (val (apply max-key val (frequencies 취침기록))))})
+
+(defn day4-part1 [{:keys [근무자 가장많이잠든시간]}]
+  (* 근무자 가장많이잠든시간))
+
+;; 파트 2
+;; 주어진 분(minute)에 가장 많이 잠들어 있던 가드의 ID과 그 분(minute)을 곱한 값을 구하라.
 
 
+(defn day4-part2 [{:keys [근무자 가장많이잠든시간]}]
+  (* 근무자 가장많이잠든시간))
+
+(comment
+   (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
+        (reduce 근무자별기록정리 [[] nil])
+        first
+        (apply (partial merge-with into))
+        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
+        (apply max-key :총취침횟수)
+        day4-part1)
+   (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
+        (reduce 근무자별기록정리 [[] nil])
+        first
+        (apply (partial merge-with into))
+        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
+        (apply max-key :빈도)
+        day4-part2))
+
+
+;; 아래는 이거저거 테스트 하기 위한 comment
 ((comment
-   (문자열-to-구조체-변화 "[1518-11-01 00:00] Guard #10 begins shift")
-   (근무기록-to-데이터 "[1518-11-01 00:00] Guard #10 begins shift")
-   (map 문자열-to-구조체-변화 (데이터로드 "day4.sample.txt"))
- (->> (map 문자열-to-구조체-변화 (데이터로드 "day4.sample copy.txt"))
+   (근무기록-to-키값-쌍 "[1518-11-01 00:00] Guard #10 begins shift")
+   (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
+      (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
+        (reduce 근무자별기록정리 [[] nil])
+        first
+        (apply (partial merge-with into)))
+   (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
+        (reduce 근무자별기록정리 [[] nil])
+        first
+        (apply (partial merge-with into))
+        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록)))))
+   (partition-by #(contains? (set ["[1518-11-01 00:00] Guard #10 begins shift"  "[1518-11-01 23:58] Guard #99 begins shift"]) %) (데이터로드 "day4.sample.txt"))
+   (데이터로드 "day4.sample.txt"))
+ (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
       (reduce 근무자별기록정리 [[] nil])
       first
       (apply (partial merge-with into))
       (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
-      )
-   (partition-by #(contains? (set ["[1518-11-01 00:00] Guard #10 begins shift"  "[1518-11-01 23:58] Guard #99 begins shift"]) %) (데이터로드 "day4.sample.txt"))
-   (데이터로드 "day4.sample.txt"))
- (->> (map 문자열-to-구조체-변화 (데이터로드 "day4.sample copy.txt"))
+      (apply max-key :총취침횟수))
+ (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
       (reduce 근무자별기록정리 [[] nil])
       first
-      (apply (partial merge-with into)) ;2
+      (apply (partial merge-with into))
       (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
-      (apply max-key :총취침횟수)
-      )
- (->> (map 문자열-to-구조체-변화 (데이터로드 "day4.sample copy.txt"))
-      (reduce 근무자별기록정리 [[] nil])
-      first
-      (apply (partial merge-with into)) ;2
-      (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
-      (apply max-key :가장오래잠들었던분2))
- )
+      (apply max-key :빈도)))
 
 
 
@@ -143,8 +171,5 @@
 ;;                  tye: wake] }
 
 ;; sort 
-
-;; 파트 2
-;; 주어진 분(minute)에 가장 많이 잠들어 있던 가드의 ID과 그 분(minute)을 곱한 값을 구하라.
 
 
