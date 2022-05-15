@@ -70,12 +70,30 @@
        (map #(range (first %) (second %)))
        (reduce concat)))
 
-
 (defn 취침-기상-시간-freq [근무자 취침기록]
-  {:근무자 (Integer/parseInt 근무자)
-   :총취침횟수 (count 취침기록)
-   :가장많이잠든시간 (if (empty? (frequencies 취침기록)) 0 (key (apply max-key val (frequencies 취침기록))))
-   :빈도 (if (empty? (frequencies 취침기록)) 0 (val (apply max-key val (frequencies 취침기록))))})
+  "근무자와 취침기록을 가져와서 근무자별 총 취침횟수, 가장 많이 잠든시간, 빈도를 구하는 로직
+   입력 : 근무자 아이디와 취침기록
+      10 [5 25 30 55 24 29]
+   출력 : { 
+   근무자: 10
+   총취침횟수: 20
+   가장많이잠든시간: 45
+   빈도: 3
+   }"
+  (println "취침기록" 취침기록)
+  (let [취침기록-seq (취침-기상-시간-seq 취침기록)]
+    {:근무자 (Integer/parseInt 근무자)
+     :총취침횟수 (count 취침기록-seq)
+     :가장많이잠든시간 (if (empty? (frequencies 취침기록-seq)) 0 (key (apply max-key val (frequencies 취침기록-seq))))
+     :빈도 (if (empty? (frequencies 취침기록-seq)) 0 (val (apply max-key val (frequencies 취침기록-seq))))}))
+
+
+;; 아래처럼 묶고 싶었는데..
+;; (defn test11 [value]
+;;   (->> value
+;;        first
+;;        (apply (partial merge-with into))
+;;        (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 취침기록))))
 
 (defn day4-part1 [{:keys [근무자 가장많이잠든시간]}]
   (* 근무자 가장많이잠든시간))
@@ -88,18 +106,18 @@
   (* 근무자 가장많이잠든시간))
 
 (comment
-   (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
+   (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
         (reduce 근무자별기록정리 [[] nil])
         first
         (apply (partial merge-with into))
-        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
+        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 취침기록)))
         (apply max-key :총취침횟수)
         day4-part1)
    (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample.txt"))
         (reduce 근무자별기록정리 [[] nil])
         first
         (apply (partial merge-with into))
-        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
+        (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 취침기록)))
         (apply max-key :빈도)
         day4-part2))
 
@@ -130,7 +148,11 @@
       first
       (apply (partial merge-with into))
       (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 (취침-기상-시간-seq 취침기록))))
-      (apply max-key :빈도)))
+      (apply max-key :빈도))
+  (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
+        (apply (merge-with into (first (reduce 근무자별기록정리 [[] nil])))))
+   
+)
 
 
 
