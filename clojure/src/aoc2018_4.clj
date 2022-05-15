@@ -104,6 +104,9 @@
 (defn day4-part2 [{:keys [근무자 가장많이잠든시간]}]
   (* 근무자 가장많이잠든시간))
 
+(defn day4-해답 [{:keys [근무자 가장많이잠든시간]}]
+  (* 근무자 가장많이잠든시간))
+
 (comment
    (->> (map 근무기록-to-키값-쌍 (데이터로드 "day4.sample2.txt"))
         (reduce 근무자별기록정리 [[] nil])
@@ -118,7 +121,7 @@
         (apply (partial merge-with into))
         (map (fn [[근무자 취침기록]] (취침-기상-시간-freq 근무자 취침기록)))
         (apply max-key :빈도)
-        day4-part2))
+        day4-해답))
 
 
 ;; 아래는 이거저거 테스트 하기 위한 comment
