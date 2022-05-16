@@ -6,7 +6,10 @@
 ;; 문자열을 숫자로 바꾸면 값을 가져오기가 수월함 -> 정규식을 안써도 됨
 (def 데이터로드 (->> "resources/day5.sample.txt"
                 (slurp)
-                (map int)))
+                (map int)
+                (into []) ;; last시 속도 빠르게
+                )
+  )
 
 (defn 반응대상? [직전문자-ascii 현재문자-ascii]
   "현재 문자와 직전의 문자가 같은지 확인
