@@ -18,7 +18,7 @@
   (= (abs (- 직전문자-ascii 현재문자-ascii)) 32))
 
 (defn 반응후살아남는것 [확인대상]
-  "문자열을 읽어서 바로 옆의 값과 같은 종류의 대소문자일 경우에는 제거되는 로직을"
+  "문자열을 읽어서 바로 옆의 값과 같은 종류의 대소문자일 경우에는 제거되는 로직"
   (->> 확인대상
        (reduce (fn [반응되지않는문자모음 비교대상]
                  (if (empty? 반응되지않는문자모음)
@@ -51,26 +51,30 @@
 (defn 문자-삭제 [비교원본 문자]
   (filter #((complement contains?) 문자 %) 비교원본))
 
-(defn A-Z-까지-하나씩-삭제 [polymer]
-  (for [i (range (int \a) (int \z))]
-    (문자-삭제 polymer #{i (- i 32)})))
+(defn a-z-까지-하나씩-삭제 [polymer]
+  (for [알파벳-소문자-ascii-index (range (int \a) (int \z))]
+    (문자-삭제 polymer #{알파벳-소문자-ascii-index (- 알파벳-소문자-ascii-index 32)})))
 
 (comment (->> 데이터로드
-              A-Z-까지-하나씩-삭제
+              a-z-까지-하나씩-삭제
               (map #(반응후살아남는것 %))
               (map count)
               (apply min)))
 
 
 ;; 물어보고 싶은거
+#dbg
  (defn 반응후살아남는것2 [확인대상]
-   (->> ((let [확인 확인대상 반응되지않는문자모음 []]
-           (loop [match (first  (rest 확인))]
-             (if (empty? 반응되지않는문자모음)
+   (->> (let [확인 확인대상 반응되지않는문자모음 []]
+           (loop [match (first 확인) 반응되지않는문자모음1 []]
+             (if (empty? 반응되지않는문자모음1)
                (conj 반응되지않는문자모음 match)
                (if (반응대상? (last 반응되지않는문자모음) match)
                  (pop 반응되지않는문자모음)
                  (conj 반응되지않는문자모음 match)))
-             (recur (first (rest 확인))))
-           반응되지않는문자모음))))
+             (recur (rest 확인) (conj 반응되지않는문자모음 반응되지않는문자모음1)))
+           반응되지않는문자모음)))
 
+(comment (->> 데이터로드
+              반응후살아남는것2
+              count))
