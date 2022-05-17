@@ -51,9 +51,9 @@
 (defn 문자-삭제 [비교원본 문자]
   (filter #((complement contains?) 문자 %) 비교원본))
 
-(defn a-z-까지-하나씩-삭제 [polymer]
+(defn a-z-까지-하나씩-삭제 [문자열]
   (for [알파벳-소문자-ascii-index (range (int \a) (int \z))]
-    (문자-삭제 polymer #{알파벳-소문자-ascii-index (- 알파벳-소문자-ascii-index 32)})))
+    (문자-삭제 문자열 #{알파벳-소문자-ascii-index (- 알파벳-소문자-ascii-index 32)})))
 
 (comment (->> 데이터로드
               a-z-까지-하나씩-삭제
@@ -65,15 +65,22 @@
 ;; 물어보고 싶은거
 #dbg
  (defn 반응후살아남는것2 [확인대상]
-   (->> (let [확인 확인대상 반응되지않는문자모음 []]
-           (loop [match (first 확인) 반응되지않는문자모음1 []]
-             (if (empty? 반응되지않는문자모음1)
-               (conj 반응되지않는문자모음 match)
-               (if (반응대상? (last 반응되지않는문자모음) match)
-                 (pop 반응되지않는문자모음)
-                 (conj 반응되지않는문자모음 match)))
-             (recur (rest 확인) (conj 반응되지않는문자모음 반응되지않는문자모음1)))
-           반응되지않는문자모음)))
+   (->> (let [반응되지않는문자모음 []]
+          (loop [match 확인대상]
+            (when (= false (empty? match))
+              (let [확인 (first match)]
+                (if (empty? 반응되지않는문자모음)
+                  (conj 반응되지않는문자모음 확인)
+                  (if (반응대상? (last 반응되지않는문자모음) 확인)
+                    (pop 반응되지않는문자모음)
+                    (conj 반응되지않는문자모음 확인))))
+               )
+            (recur (rest match))
+           )
+          
+          반응되지않는문자모음)
+        ))
+
 
 (comment (->> 데이터로드
               반응후살아남는것2
