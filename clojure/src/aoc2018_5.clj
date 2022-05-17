@@ -4,11 +4,10 @@
 
 ;; https://stackoverflow.com/questions/19749624/how-to-cast-a-character-to-int-in-clojure
 ;; 문자열을 숫자로 바꾸면 값을 가져오기가 수월함 -> 정규식을 안써도 됨
-(def 데이터로드 (->> "resources/day5.sample.txt"
+(def 데이터로드 (->> "resources/day5.sample copy.txt"
                 (slurp)
                 (mapv int);; last시 속도 빠르게
-                )
-  )
+                ))
 
 (defn 반응대상? [직전문자-ascii 현재문자-ascii]
   "현재 문자와 직전의 문자가 같은지 확인
@@ -25,14 +24,10 @@
                  (if (empty? 반응되지않는문자모음)
                    (conj 반응되지않는문자모음 비교대상)
                    ;; 미사용이라 _로 하면 되는걸 확인
-                   (if-let [_ (반응대상? (last 반응되지않는문자모음) 비교대상)]
+                   (if (반응대상? (last 반응되지않는문자모음) 비교대상)
                      (pop 반응되지않는문자모음)
                      (conj 반응되지않는문자모음 비교대상))))
-               []
-               )
-       )
-  )
-
+               [])))
 
 ;; 파트 1
 ;; 입력: dabAcCaCBAcCcaDA
@@ -67,7 +62,15 @@
               (apply min)))
 
 
+;; 물어보고 싶은거
+ (defn 반응후살아남는것2 [확인대상]
+   (->> ((let [확인 확인대상 반응되지않는문자모음 []]
+           (loop [match (first  (rest 확인))]
+             (if (empty? 반응되지않는문자모음)
+               (conj 반응되지않는문자모음 match)
+               (if (반응대상? (last 반응되지않는문자모음) match)
+                 (pop 반응되지않는문자모음)
+                 (conj 반응되지않는문자모음 match)))
+             (recur (first (rest 확인))))
+           반응되지않는문자모음))))
 
-(comment 
-  (int \a)
-  (int \A))
