@@ -7,8 +7,8 @@
 (def 데이터로드
   "파일을 읽어서 숫자 벡터를 반환"
   (->> (io/resource "2020_day1.sample.txt")
-       (slurp)
-       (str/split-lines)
+       slurp
+       str/split-lines
        (map #(Integer/parseInt %))))
 
 
