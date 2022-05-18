@@ -887,3 +887,75 @@ clj꞉aoc2020-1꞉> 
 clj꞉aoc2020-1꞉> 
 244300320
 clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/a
+clj꞉aoc2020-1꞉> (a ["1" "1"] 4)
+; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3734).
+; Cannot cast clojure.lang.PersistentVector to java.lang.Number
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3734).
+; Cannot cast clojure.lang.PersistentVector to java.lang.Number
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/a
+clj꞉aoc2020-1꞉> (a ["1" "1"] 4)
+; Execution error (ClassCastException) at aoc2020-1/a (REPL:27).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉aoc2020-1꞉> (a [1 2] 4)
+false
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:25:20).
+; Unable to resolve symbol: 목표값일치여부 in this context
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/목표값일치여부
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (IndexOutOfBoundsException) at aoc2020-1/eval8548$원하는-값$iter$fn$iter$fn$fn (REPL:25).
+; null
+clj꞉aoc2020-1꞉> 
+; Execution error (IndexOutOfBoundsException) at aoc2020-1/eval8548$원하는-값$iter$fn$iter$fn$fn (REPL:25).
+; null
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/목표값일치여부
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/목표값일치여부
+clj꞉aoc2020-1꞉> 
+; Execution error (IndexOutOfBoundsException) at aoc2020-1/eval8588$원하는-값$iter$fn$iter$fn$fn (REPL:26).
+; null
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (IndexOutOfBoundsException) at aoc2020-1/eval8622$원하는-값$iter$fn$iter$fn$fn (REPL:26).
+; null
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/목표값일치여부
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값2
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/목표값일치여부
+clj꞉aoc2020-1꞉> 
+241861950
+clj꞉aoc2020-1꞉> 
