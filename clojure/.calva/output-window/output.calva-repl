@@ -1,0 +1,889 @@
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:35:24).
+; Unable to resolve symbol: fist in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:57:10).
+; Unable to resolve symbol: 데이터로드 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:35:24).
+; Unable to resolve symbol: fist in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:40:13).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:34:4).
+; Mismatched argument count to recur, expected: 1 args, got: 2
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:27:31).
+; Unable to resolve symbol: 반응대상? in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:41:13).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ClassCastException) at aoc2018-5/반응대상? (REPL:18).
+; class clojure.lang.PersistentVector cannot be cast to class java.lang.Number (clojure.lang.PersistentVector is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/my-re-seq
+clj꞉aoc2018-5꞉> 
+["0" "1" "2" "3" "4" "5" "6" "7" "8" "9"]
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:38:19).
+; Unable to resolve symbol: 반응대상? in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:27:31).
+; Unable to resolve symbol: 반응대상? in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:41:13).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:37:15).
+; Unable to resolve symbol: matchv in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:37:15).
+; Unable to resolve symbol: matchv in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7618$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:34:4).
+; Unable to resolve symbol: 확인대상 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:37:15).
+; Mismatched argument count to recur, expected: 1 args, got: 2
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> (first (next match)
+; java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> (first (next match))
+; java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7630$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 반응되지않는문자모음
+[]
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:41:13).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7690$반응후살아남는것2$fn (REPL:41).
+; Key must be integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+; Execution error (ClassCastException) at aoc2018-5/반응후살아남는것$fn (REPL:27).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+10
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:35:23).
+; Unable to resolve symbol: v in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7727$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; java.lang.IllegalArgumentException: Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7727$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7738$반응후살아남는것2$fn (REPL:57).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7749$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7757$반응후살아남는것2$fn (REPL:41).
+; Don't know how to create ISeq from: java.lang.Integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:78:10).
+; Unable to resolve symbol: 데이터로드 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7595$반응후살아남는것2$fn (REPL:69).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+#function[clojure.core/count]
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7595$반응후살아남는것2$fn (REPL:69).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7606$반응후살아남는것2$fn (REPL:69).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+; Syntax error reading source at (REPL:80:22).
+; Unmatched delimiter: )
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7630$반응후살아남는것2$fn (REPL:71).
+; Key must be integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Execution error (IllegalArgumentException) at aoc2018-5/eval7651$반응후살아남는것2$fn (REPL:72).
+; Key must be integer
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:72:16).
+; Unable to resolve symbol: 반응되지않는반응되지않는문자모음1문자모음 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:76:31).
+; Unable to resolve symbol: 반응되지않은문자모음 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:76:31).
+; Unable to resolve symbol: 반응되지않은문자모음 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:76:31).
+; Unable to resolve symbol: 반응되지않은문자모음1 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:69:4).
+; Unable to resolve symbol: 확인대상 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:57:5).
+; Unable to resolve symbol: 문자-삭제 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/문자-삭제
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/a-z-까지-하나씩-삭제
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+4
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:70:18).
+; Unable to resolve symbol: 반응되지않는문자모음1 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:75:14).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:76:13).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:76:13).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:68:4).
+; Unable to resolve symbol: 반응되지않는문자모음 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error (IllegalArgumentException) compiling recur at (src/aoc2018_5.clj:76:13).
+; Mismatched argument count to recur, expected: 2 args, got: 1
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:68:4).
+; Unable to resolve symbol: 반응되지않는문자모음 in this context
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:76:37).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:76:37).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval5859$반응후살아남는것2$fn (REPL:70).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval5867$반응후살아남는것2$fn (REPL:70).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+; Syntax error compiling at (src/aoc2018_5.clj:69:11).
+; Unable to resolve symbol: 확인대상 in this context
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7623$반응후살아남는것2$fn (REPL:70).
+; Wrong number of args (2) passed to: clojure.core/complement
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7623$반응후살아남는것2$fn (REPL:70).
+; Wrong number of args (2) passed to: clojure.core/complement
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ArityException) at aoc2018-5/eval7637$반응후살아남는것2$fn (REPL:70).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> (rest [100])
+()
+clj꞉aoc2018-5꞉> (nil? ())
+false
+clj꞉aoc2018-5꞉> (empty? ())
+true
+clj꞉aoc2018-5꞉> (not-empty (1))
+nil
+clj꞉aoc2018-5꞉> (not-empty (1))
+; Execution error (ClassCastException) at aoc2018-5/eval7589 (REPL:564).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2018-5꞉>(not-empty [1])
+
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; Execution error (ClassCastException) at aoc2018-5/eval7591$반응후살아남는것2$fn (REPL:70).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:72:39).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:72:39).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; java.lang.UnsupportedOperationException: Can only recur from tail position
+clj꞉aoc2018-5꞉> (loop [x 10]
+                  (when (> x 1)
+                    (println x)
+                    (recur (- x 2))))
+10
+8
+6
+4
+2
+nil
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+; Syntax error (UnsupportedOperationException) compiling recur at (src/aoc2018_5.clj:79:11).
+; Can only recur from tail position
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+QUIT
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것2
+clj꞉aoc2018-5꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Starting Jack-in Terminal: clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware]"
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉user꞉> 
+; Jack-in done.
+clj꞉user꞉> 
+nil
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/데이터로드
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응대상?
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/반응후살아남는것
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/문자-삭제
+clj꞉aoc2018-5꞉> 
+#'aoc2018-5/a-z-까지-하나씩-삭제
+clj꞉aoc2018-5꞉> (filter #((complement contains?) 문자 %) 비교원본)
+(100 98 99 67 67 66 99 67 99 68)
+clj꞉aoc2018-5꞉> 
+4
+clj꞉aoc2018-5꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:24:3).
+; Unable to resolve symbol: 데이터로드 in this context
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7655 (REPL:24).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7657 (REPL:24).
+; Wrong number of args (0) passed to: clojure.core/map/fn--5931
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7659 (REPL:23).
+; Wrong number of args (0) passed to: clojure.core/map/fn--5931
+clj꞉aoc2020-1꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7671 (REPL:24).
+; Wrong number of args (0) passed to: clojure.core/map/fn--5931
+clj꞉aoc2020-1꞉> 
+; Execution error (IllegalArgumentException) at nrepl.middleware.interruptible-eval/evaluate$fn$fn (interruptible_eval.clj:87).
+; Cannot open <nil> as a Reader.
+clj꞉aoc2020-1꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7683 (REPL:25).
+; Wrong number of args (0) passed to: clojure.core/map/fn--5931
+clj꞉aoc2020-1꞉> (io/resource "2020_day1.sample copy.txt")
+#object[java.net.URL 0x31da771b "file:/Users/arthur/Projects/bootcamp-aoc/clojure/resources/2020_day1.sample%20copy.txt"]
+clj꞉aoc2020-1꞉> (slurp(io/resource "2020_day1.sample copy.txt"))
+"1721\n979\n366\n299\n675\n1456"
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:16:17).
+; Unable to find static field: parseInt in class java.lang.Integer
+clj꞉aoc2020-1꞉> 
+; Syntax error reading source at (REPL:16:41).
+; No reader function for tag Integer/parseInt
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at aoc2020-1/eval7689 (REPL:25).
+; Wrong number of args (0) passed to: clojure.core/map/fn--5931
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval7695 (REPL:25).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+(1721 979 366 299 675 1456)
+clj꞉aoc2020-1꞉> 
+(1721 979 366 299 675 1456)
+clj꞉aoc2020-1꞉> 
+(1721 979 366 299 675 1456)
+clj꞉aoc2020-1꞉> 
+(1721 979 366 299 675 1456)
+clj꞉aoc2020-1꞉> 
+
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+#function[aoc2020-1/comb-seq-2]
+clj꞉aoc2020-1꞉> 
+(514579 514579)
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+([1721 299] [299 1721])
+clj꞉aoc2020-1꞉> 
+; Syntax error macroexpanding clojure.core/let at (src/aoc2020_1.clj:19:3).
+; & - failed: (not= (quote &) %) at: [:bindings :form :local-symbol] spec: :clojure.core.specs.alpha/local-name
+& - failed: vector? at: [:bindings :form :seq-destructure] spec: :clojure.core.specs.alpha/seq-binding-form
+& - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-bindings
+& - failed: map? at: [:bindings :form :map-destructure] spec: :clojure.core.specs.alpha/map-special-binding
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+([1721 299] [299 1721])
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+; Error printing return value (ClassCastException) at aoc2020-1/comb-seq-2$iter$fn$iter$fn$fn (NO_SOURCE_FILE:21).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+([1721 299] [299 1721])
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/comb-seq-2
+clj꞉aoc2020-1꞉> 
+[1721 299]
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (IllegalArgumentException) at aoc2020-1/eval7913 (REPL:35).
+; Don't know how to create ISeq from: clojure.core$partial$fn__5910
+clj꞉aoc2020-1꞉> 
+; Syntax error reading source at (REPL:24:15).
+; No reader function for tag deg
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (IllegalArgumentException) at aoc2020-1/eval7943 (REPL:36).
+; Don't know how to create ISeq from: clojure.core$partial$fn__5910
+clj꞉aoc2020-1꞉> 
+; Execution error (IllegalArgumentException) at aoc2020-1/eval7945 (REPL:36).
+; Key must be integer
+clj꞉aoc2020-1꞉> 
+nil
+clj꞉aoc2020-1꞉> 
+; Execution error (IllegalArgumentException) at aoc2020-1/eval7947 (REPL:36).
+; Don't know how to create ISeq from: clojure.core$partial$fn__5910
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling def at (src/aoc2020_1.clj:18:1).
+; Too many arguments to def
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/fil
+clj꞉aoc2020-1꞉> fil(2020 [1 2 3])
+; Execution error (ClassCastException) at aoc2020-1/eval7968 (REPL:788).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/fil
+clj꞉aoc2020-1꞉> fil (2020 [1 2 3])
+; Execution error (ClassCastException) at aoc2020-1/eval7973 (REPL:793).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:26:20).
+; Unable to resolve symbol: a in this context
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/a
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ArityException) at cider.nrepl.middleware.debug/apply-instrumented-maybe (debug.clj:525).
+; Wrong number of args (2) passed to: clojure.core/filter/fn--5958
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8072$필터 (REPL:20).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8072$필터 (REPL:20).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+QUIT
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8136$필터 (REPL:20).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:20:10).
+; Unable to resolve symbol: 비교배열 in this context
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+; Syntax error compiling at (src/aoc2020_1.clj:28:23).
+; Unable to resolve symbol: y1 in this context
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8198$원하는-값$iter$fn$iter$fn$fn (REPL:28).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8228$원하는-값$iter$fn$iter$fn$fn (REPL:28).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8274$원하는-값$iter$fn$iter$fn$fn (REPL:28).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/필터
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+; Execution error (ClassCastException) at aoc2020-1/eval8308$원하는-값$iter$fn$iter$fn$fn (REPL:28).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+514579
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/데이터로드
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+319531
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값
+clj꞉aoc2020-1꞉> 
+319531
+clj꞉aoc2020-1꞉> 
+#'aoc2020-1/원하는_값2
+clj꞉aoc2020-1꞉> 
+244300320
+clj꞉aoc2020-1꞉> 
