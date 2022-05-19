@@ -16,7 +16,7 @@
 
 (def 값이숫자인필수키 #{:byr :iyr :eyr})
 (def 단위가있는필수키 #{:hgt})
-(def 조건이없는필수키 #{:ecl  :pid :hcl})
+(def 조건이없는필수키 #{:ecl :pid :hcl})
 (def 필수키 (cset/union 값이숫자인필수키 단위가있는필수키 조건이없는필수키))
 
 (defn 문자열->키값 [키 값]
@@ -128,10 +128,10 @@
 (spec/def ::iyr (spec/int-in 2010 2021))
 (spec/def ::eyr (spec/int-in 2020 2031))
 ;; 안된거
-;; (spec/def ::hgt (fn [{값 :value 단위 :unit}]
+;; (spec/def ::hgt (fn [{수치 :수치 단위 :단위}]
 ;;                   (or
-;;                    (and (= 단위 "cm") ((spec/int-in 150 194) 값))
-;;                    (and (= 단위 "in") ((spec/int-in 59 76) 값)))))
+;;                    (and (= 단위 "cm") ((spec/int-in 150 194) 수치))
+;;                    (and (= 단위 "in") ((spec/int-in 59 76) 수치) ))))
 (spec/def ::hgt (fn [{수치 :수치 단위 :단위}]
                   (or
                    (and (= 단위 "cm") (<= 150 수치 193))
@@ -141,9 +141,11 @@
 (spec/def ::pid #(re-matches #"\d{9}" %))
 (spec/def ::passport (spec/keys :req-un [::byr ::iyr ::eyr ::hgt ::hcl ::ecl ::pid]))
 
-(defn 여권정보값이모두유효인지? [passport]
+(defn 여권정보값이모두유효인지? [여권정보]
   "여권 정보에 모든 필수정보가 모두 유효한 값인지 확인"
-  (spec/valid? ::passport passport))
+  (spec/valid? ::passport 여권정보))
+;; => #'aoc2020-4/여권정보값이모두유효인지?
+
 
 (defn 해결-part2 [data]
   (->> data
