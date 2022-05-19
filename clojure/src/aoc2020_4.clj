@@ -23,8 +23,8 @@
   (cond
     (값이숫자인필수키 키) (Integer/parseInt 값)
     (단위가있는필수키 키) (let [[수치 단위] (rest (re-find (re-matcher #"([\d]+)?([a-z]+)?" 값)))]
-                    {:value (Integer/parseInt 수치)
-                     :unit 단위})
+                    {:수치 (Integer/parseInt 수치)
+                     :단위 단위})
     (조건이없는필수키 키) (str 값)))
 
 (defn 문자열-여권정보->키값-여권정보 [문자열-여권정보]
@@ -127,14 +127,15 @@
 (spec/def ::byr (spec/int-in 1920 2003))
 (spec/def ::iyr (spec/int-in 2010 2021))
 (spec/def ::eyr (spec/int-in 2020 2031))
-(spec/def ::hgt (fn [{값 :value 단위 :unit}]
+;; 안된거
+;; (spec/def ::hgt (fn [{값 :value 단위 :unit}]
+;;                   (or
+;;                    (and (= 단위 "cm") ((spec/int-in 150 194) 값))
+;;                    (and (= 단위 "in") ((spec/int-in 59 76) 값)))))
+(spec/def ::hgt (fn [{수치 :수치 단위 :단위}]
                   (or
-                   (and (= 단위 "cm") ((spec/int-in 150 194) 값))
-                   (and (= 단위 "in") (<= 59 값 76)))))
-(spec/def ::hgt (fn [{값 :value 단위 :unit}]
-                  (or
-                   (and (= 단위 "cm") (<= 150 값 193))
-                   (and (= 단위 "in") (<= 59 값 76)))))
+                   (and (= 단위 "cm") (<= 150 수치 193))
+                   (and (= 단위 "in") (<= 59 수치 76)))))
 (spec/def ::hcl #(re-matches #"#[0-9a-f]{6}" %))
 (spec/def ::ecl #(re-matches #"(amb|blu|brn|gry|grn|hzl|oth)" %))
 (spec/def ::pid #(re-matches #"\d{9}" %))
@@ -144,8 +145,8 @@
   "여권 정보에 모든 필수정보가 모두 유효한 값인지 확인"
   (spec/valid? ::passport passport))
 
-(defn 해결-part2 [input]
-  (->> input
+(defn 해결-part2 [data]
+  (->> data
        (map 문자열-여권정보->키값-여권정보)
        (filter 여권정보값이모두유효인지?)
        count))
