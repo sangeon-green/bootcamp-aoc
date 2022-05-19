@@ -7,7 +7,7 @@
 
 (defn 단락분리 [입력값]
   "입력된 데이터가 \n\n으로 구분 되어 있어서 단락 구분을 위해 split"
-  (->> (str/split 입력값 #"\n\n")))
+  (str/split 입력값 #"\n\n"))
 
 (def data-load
   (->>  (io/resource "2020_day4.sample-light.txt")
