@@ -2,8 +2,7 @@
   (:require [clojure.core]
             [clojure.java.io :as io]
             [clojure.string :as str]
-            [clojure.data :as data]
-            [clojure.set :as set]))
+            [clojure.set :as cset]))
 
 (defn 선행-후행-업무분리
   "입력된 값을 분석하여 현재 업무를 기준으로 선행되어야 할 업무를 입력
@@ -11,7 +10,7 @@
    출력값: {A #{C}}"
   [입력값]
   (->> 입력값
-       (re-seq #"(\W) must be finished before step (\W)) can begin.")
+       (re-seq #"([A-Z]) must be finished before step ([A-Z]) can begin.")
        (map #(rest %))
        (reduce
          (fn [업무분리 [선행업무 후행업무]]
@@ -29,6 +28,6 @@
   [전체업무]
   (let [선행업무
         (->>
-         (data/diff (apply set/union (vals 전체업무)) (set (keys 전체업무)))
+         (cset/difference (apply cset/union (vals 전체업무)) (set (keys 전체업무)))
          first)]
     선행업무))
